@@ -18,6 +18,7 @@ public class StatusController {
     public ResponseEntity<StatusResponse> getStatus() {
 
         StatusResponse response = new StatusResponse("running", LocalDateTime.now(ZoneOffset.UTC));
+        log.info("This is just a log from the controller");
         return ResponseEntity
                 .ok()
                 .body(response);
